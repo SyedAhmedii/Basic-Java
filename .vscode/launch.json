@@ -1,0 +1,68 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LargestNumber",
+            "request": "launch",
+            "mainClass": "LargestNumber",
+            "projectName": "Basic java_d82a08fb"
+        },
+        {
+            "type": "java",
+            "name": "ZodiacAnimal",
+            "request": "launch",
+            "mainClass": "ZodiacAnimal",
+            "projectName": "Basic java_d82a08fb"
+        },
+        {
+            "type": "java",
+            "name": "ShowCurrentTime",
+            "request": "launch",
+            "mainClass": "ShowCurrentTime",
+            "projectName": "Basic java_d82a08fb"
+        },
+        {
+            "type": "java",
+            "name": "Practice",
+            "request": "launch",
+            "mainClass": "Practice",
+            "projectName": "Basic java_d82a08fb"
+        },
+        {
+            "type": "java",
+            "name": "Recursion (Basic java_d82a08fb)",
+            "request": "launch",
+            "mainClass": "Recursion",
+            "projectName": "Basic java_d82a08fb"
+        },
+        {
+            "type": "java",
+            "name": "App (Basic java_d82a08fb)",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Basic java_d82a08fb"
+        },
+        {
+            "type": "java",
+            "name": "Arrays (Basic java_d82a08fb)",
+            "request": "launch",
+            "mainClass": "Arrays",
+            "projectName": "Basic java_d82a08fb"
+        },
+        {
+            "type": "java",
+            "name": "Run Current File",
+            "request": "launch",
+            "mainClass": "${fileBasenameNoExtension}",
+            "projectName": "Basic java_d82a08fb"
+        },
+        {
+            "type": "java",
+            "name": "Arrays (Firstclass_1543daef)",
+            "request": "launch",
+            "mainClass": "Arrays",
+            "projectName": "Firstclass_1543daef"
+        }
+    ]
+}
