@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RandomNameGenerator",
+            "request": "launch",
+            "mainClass": "RandomNameGenerator",
+            "projectName": "Basic java_d82a08fb"
+        },
+        {
+            "type": "java",
             "name": "LargestNumber",
             "request": "launch",
             "mainClass": "LargestNumber",

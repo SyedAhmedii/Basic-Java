@@ -1215,3 +1215,431 @@
 //         }
 //     }
 // }
+
+// You are developing a student management system for a school. 
+// The school wants you to implement a feature where you store the marks of students in five subjects 
+// and calculate the following for each student:
+
+// import java.util.Scanner;
+// public class Practice {
+
+//     public static void main(String[] args) {
+//         Scanner sc  = new Scanner(System.in);
+//         int [] marks = new int[5];
+//         int totalMarks = 0;
+//         boolean isFailed = false;
+//         System.out.println("Enter Marks of 5 subjects");
+//         for (int i = 0; i < 5; i++){
+//             System.out.println("Subject" + " " + (i + 1) + ":");
+//             marks[i] = sc.nextInt();
+//         }
+//         for (int i = 0; i < 5; i++){
+//             totalMarks += marks[i];
+//         }
+//         double average = totalMarks / 5.0;
+//         if(average < 40){
+//             isFailed = true;
+//         }
+//         System.out.println("Total Marks: " + totalMarks);
+//         System.out.println("Average Marks: " + average);
+//         if(isFailed){
+//             System.out.println("Student Failed");
+//         }
+//         else{
+//             System.out.println("Student Passed");
+//         }
+//     }
+// }
+
+// Quick revision of Arrays:
+
+// import java.util.*;
+// public class Practice{
+//     public static void main(String[] args) {
+//         int[] marks = new int[5];
+//         for (int i = 0; i < marks.length; i++){
+//             marks[i] = (int)(Math.random() * 100) + 1;           
+//         }
+//         System.out.println("Random Marks: ");
+//         for (int i = 0; i < marks.length; i++) {
+//             System.out.println("Subject " + (i + 1) + ": " + marks[i]);
+//         }
+//     }
+// }
+
+// reverse array:
+
+// import java.util.*;
+// public class Practice {
+
+//     public static void main(String[] args) {
+//         int num[] = new int[5];
+//         for (int i = 0; i < num.length; i++){
+//             num[i] = (int)(Math.random() * 100) + 1;
+//         }
+//         System.out.println("Original Array: ");
+//         for (int i = 0; i < num.length; i++){
+//             System.out.println("Index " + i + " = " + num[i]);
+//         }
+//         System.out.println("Reverse Array: ");
+//         for (int i = num.length - 1; i >= 0; i--){ // ye step sabse kaam ka hai
+//             System.out.println("Index " + i + " = " + num[i]);
+//         }
+//     }
+// }
+
+// Linear Searching ka concept:
+
+// import java.util.*;
+// public class Practice {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter size of Array: ");
+//         int size = sc.nextInt();
+//         sc.nextLine();
+//         boolean found = false;
+//         String names[] = new String[size];
+//         for (int i = 0; i < names.length; i++) {
+//             System.out.println("Enter Name " + (i + 1) + ":");
+//             names[i] = sc.nextLine();
+//         }
+//         System.out.println("\n Enter Name to Search: ");
+//         String search = sc.nextLine();
+//         for (int i = 0; i < names.length; i++) {
+//             if (names[i].equals(search)) {
+//                 System.out.println(search + " found at Index: " + i);
+//                 found = true;
+//                 break;
+//             }
+//         }
+//         if (!found) {
+//             System.out.println(search + " not found");
+//         }
+//     }
+// }
+
+// Print ascending order in array:
+
+// import java.util.*;
+// public class Practice {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[] a = new int[5];
+//         System.out.println("Enter 5 numbers: ");
+//         for (int i = 0; i < a.length; i++){
+//             a[i] = sc.nextInt();
+//         }
+//         for(int i = 0; i < a.length; i++){
+//             for(int j = 0; j < a.length; j++){
+//                 if(a[i] < a[j]){
+//                     int temp = a[i];
+//                     a[i] = a[j];
+//                     a[j] = temp;
+//                 }
+//             }
+//         }
+//         for(int i = 0; i < a.length; i++){
+//             System.out.print(a[i] + " ");
+//         }
+//     }
+// }
+
+// Print descending order in array:
+
+// import java.util.*;
+// public class Practice {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[] a = new int[5];
+//         System.out.println("Enter 5 numbers: ");
+//         for (int i = 0; i < a.length; i++){
+//             a[i] = sc.nextInt();
+//         }
+//         for(int i = 0; i < a.length; i++){
+//             for(int j = i + 1; j < a.length; j++){
+//                 if(a[i] < a[j]){ // bss iss ko less than karna hai agla element greater hoga tou woh pehle ajaye ga
+//                     int temp = a[i];
+//                     a[i] = a[j];
+//                     a[j] = temp;
+//                 }
+//             }
+//         }
+//         for(int i = 0; i < a.length; i++){
+//             System.out.print(a[i] + " ");
+//         }
+//     }
+// }
+
+// Arrays methods- sort(), equals() and copyOf():
+
+// Sort = array ko by default ascending order mai sort kardeta hai (Bacho waala)
+
+// import java.util.*;
+// public class Practice {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[] a = new int[5];
+//         System.out.println("Enter numbers in array:");
+//         for(int i = 0; i < a.length; i++){
+//             a[i] = sc.nextInt();
+//         }
+//         Arrays.sort(a); // ye predefine class hai java ke util package mai isko call karna parta hai
+//         for(int i = 0; i < a.length; i++){
+//             System.out.print(a[i] + " ");
+//         }
+//     }
+// }
+
+// equal = array ko compare karke batata hai ke equal hai ki nahi hai
+
+// import java.util.*;
+// public class Practice {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[] a = new int[5];
+//         int[] b = new int[5];
+//         System.out.print("Enter data in first array");
+//         for(int i = 0; i < a.length; i++){
+//             a[i] = sc.nextInt();
+//         }
+//         System.out.print("Enter data in second array ");
+//         for(int i = 0; i < b.length; i++){
+//             b[i] = sc.nextInt(); 
+//         }
+//         boolean c = Arrays.equals(a, b); // ye predefine class hai java ke util package mai isko call karna parta hai
+//         System.out.println("Is Both Array Equal: " + c);
+//     }
+// }
+
+// Copyof = aik array ka data dosri array mai store krwa dega.
+
+// import java.util.*;
+// public class Practice{
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[] a = new int[5];
+//         System.out.println("Enter numbers in array:");
+//         for(int i = 0; i < a.length; i++){
+//             a[i] = sc.nextInt();
+//         }
+//         int[] b = Arrays.copyOf(a,5);
+//         System.out.println("Data in array 2");
+//         for(int i = 0; i < a.length; i++){
+//             System.out.print(b[i] + " ");
+//         }
+//     }
+// }
+
+// (==) operator khali reference variable yani array ki variable ke naam se bani hogi usko dekhta 
+// jabke (.equal) array ke element ko bhi compare karta hai ye aik static variable hai package mai define hai
+
+// Find biggest number in array:
+// import java.util.*;
+// public class Practice {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[] a = new int[5];
+//         System.out.println("Enter numbers in array:");
+//         for (int i = 0; i < a.length; i++){
+//             a[i] = sc.nextInt();
+//         }
+//         int max = a[0];
+//         for (int i = 1; i < a.length; i++){ // 1 se isiliye chale ga kyuke 0th index ki value pehle he max variable mai stored hai or use compare karwana hai
+//             if(a[i] > max){ // compare karne ke baad array i ka element ko max variable mai stored karwa denge ager bara hua tou
+//                 max = a[i];
+//             }
+//         }
+//         System.out.println("Biggest number in array is: " + max);
+//     }
+// }
+
+// Find smallest number in array:
+
+// import java.util.*;
+// public class Practice {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[] a = new int[5];
+//         System.out.println("Enter numbers in array:");
+//         for (int i = 0; i < a.length; i++){
+//             a[i] = sc.nextInt();
+//         }
+//         int min = a[0];
+//         for (int i = 1; i < a.length; i++){ // 1 se isiliye chale ga kyuke 0th index ki value pehle he min variable mai stored hai or use compare karwana hai
+//             if(a[i] < min){ // compare karne ke baad array i ka element ko min variable mai stored karwa denge ager bara hua tou
+//                 min = a[i];
+//             }
+//         }
+//         System.out.println("Biggest number in array is: " + min);
+//     }
+// }
+
+// Insert item in array:
+
+// import java.util.*;
+// public class Practice {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter size of an array:");
+//         int size = sc.nextInt();
+//         int[] a = new int[size + 1]; // array mai element insert karne ke liye pehle he jagah banadi size + 1 karke
+//         System.out.println("Enter numbers in array: ");
+//         for (int i = 0; i < size; i++){
+//             a[i] = sc.nextInt();
+//         }
+//         System.out.println("Enter array location: ");
+//         int loc = sc.nextInt();
+//         System.out.println("Enter number to insert: ");
+//         int num = sc.nextInt();
+//         for(int i = size; i > loc; i--){ // array ka kaam hai index (location) jo de hai usko khali karna
+//             a[i] = a[i - 1];
+//         } 
+//         a[loc] = num; 
+//         size++;
+//         System.out.println("Inserted array is: ");
+//         for(int i = 0; i < size; i++){
+//             System.out.print(a[i] + " ");
+//         }
+//     }
+// }
+
+// Delete item in array:
+
+// import java.util.*;
+// public class Practice {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter size of an array: ");
+//         int size = sc.nextInt();
+//         int[] a = new int[size];
+//         System.out.println("Enter numbers in array: ");
+//         for (int i = 0; i < size; i++){
+//             a[i] = sc.nextInt();
+//         }
+//         System.out.println("Enter array location: ");
+//         int loc = sc.nextInt();
+//         for(int i = loc; i < size - 1; i++){ // ye loop array mai number delete kare ga size - 1 isiliye kara kyuki aik number delete karana chah rahe hai
+//             a[i] = a[i + 1];
+//         }
+//         size--; // ye size ko ghata ne ke liye
+//         System.out.println("Deleted Array is: ");
+//         for(int i = 0; i < size; i++){
+//             System.out.print(a[i] + " ");
+//         }
+//     }
+// }
+
+// 2D Arrays banane ka tareeka:
+
+// import java.util.*;
+// public class Practice {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[][] a = new int[2][2];
+//         System.out.println("Enter numbers in Array: ");
+//         for(int i = 0; i < 2; i++){ // ye rows ke liye hai
+//             for(int j = 0; j < 2; j++){ // ye coloum ke liye
+//                 a[i][j] = sc.nextInt();
+//             }
+//         }
+//         System.out.println("Matrix: ");
+//         for(int i = 0; i < 2; i++){ // ye rows ke liye hai
+//             for(int j = 0; j < 2; j++){ // ye coloum ke liye
+//                 System.out.print(a[i][j] + " ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// Addition of two Matrix in Arrays: 
+// import java.util.*;
+// public class Practice {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[][] a = new int[2][2];
+//         int[][] b = new int[2][2];
+//         int[][] c = new int[2][2];
+//         System.out.print("Enter numbers in Matrix A: ");
+//         for(int i = 0; i < 2; i++){
+//             for(int j = 0; j < 2; j++){
+//                 a[i][j] = sc.nextInt();
+//             }
+//         }
+//         System.out.print("Enter numbers in Matrix B: ");
+//         for(int i = 0; i < 2; i++){
+//             for(int j = 0; j < 2; j++){
+//                 b[i][j] = sc.nextInt();
+//             }
+//         }
+//         for(int i = 0; i < 2; i++){
+//             for(int j = 0; j < 2; j++){
+//                 c[i][j] = a[i][j] + b[i][j];
+//             }
+//         }
+//         System.out.println("Sum of Matix A & B is");
+//         for(int i = 0; i < 2; i++){
+//             for(int j = 0; j < 2; j++){
+//                 System.out.print(c[i][j] + " ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// Tranposing Matrix: (coloum rows or rows coloum banajti hai)
+
+// import java.util.*;
+// public class Practice {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("How many rows");
+//         int rows = sc.nextInt();
+//         System.out.println("How many coloums");
+//         int coloums = sc.nextInt();
+//         int[][] a = new int[rows][coloums];
+//         System.out.println("Enter Matrix Numbers: ");
+//         for(int i = 0; i < rows; i++){
+//             for(int j = 0; j < coloums; j++){
+//                 a[i][j] = sc.nextInt();
+//             }
+//         }
+//         System.out.println("Transpose Matrix: ");
+//         for(int i = 0; i < rows; i++){
+//             for(int j = 0; j < coloums; j++){
+//                 System.out.print(a[j][i] + " "); // i ki jagah j or j ki jagah i print karwa denge bss
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// Mirror Matrix Using 2d Arrays: (coloum 1 coloum 2 hojata hai orr coloum 2 coloum 1)
+
+// import java.util.*;
+// public class Practice {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int[][] a = new int[2][2];
+//         System.out.println("Enter Array numbers: ");
+//         for(int i = 0; i < 2; i++){
+//             for(int j = 0; j < 2; j++){
+//                 a[i][j] = sc.nextInt();
+//             }
+//         }
+//         System.out.println("Mirror Array is: ");
+//         for(int i = 0; i < 2; i++){
+//             for(int j = 1; j >= 2; j--){
+//                 System.out.print(a[i][j] + " ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
