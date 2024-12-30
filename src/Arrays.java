@@ -1261,4 +1261,31 @@
 // printArray(arr);
 // }
 // }
+
+// ArrayList in java
+// import java.util.ArrayList;
+// class Arrays{
+//     public static void main(String[] args) {
+//         ArrayList<Integer> list = new ArrayList<Integer>();
+//         // ArrayList<String> list2 = new ArrayList<>();
+//         // ArrayList<Boolean> list3 = new ArrayList<>();
+//         // add
+//         list.add(0);
+//         list.add(1);
+//         list.add(2);
+//         list.add(3);
+//         // get
+//         int element = list.get(3);
+//         System.out.println(element);
+//         // beech mai add karne ke liye
+//         list.add(2, 39);
+//         System.out.println(list);
+//         // rewrite element
+//         list.set(2, 800);
+//         System.out.println(list);
+//         // remove karne ke liye
+//         list.remove(2);
+//         System.out.println(list);
+//     }
+// }
 // ------------------------------------------------Basic java Complete--------------------------------------------------------------
